@@ -1,7 +1,7 @@
 # Use an official Python runtime as a parent image
 FROM python:3.9-slim
 
-# Install Tesseract
+# Install Tesseract and its dependencies
 RUN apt-get update && \
     apt-get install -y tesseract-ocr && \
     apt-get clean && \

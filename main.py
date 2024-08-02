@@ -9,7 +9,7 @@ import re
 from fastapi import FastAPI, UploadFile, File
 from fastapi.responses import JSONResponse
 
-pytesseract.pytesseract.tesseract_cmd = "C:\\Program Files\\Tesseract-OCR\\tesseract.exe"
+pytesseract.pytesseract.tesseract_cmd =  "/usr/bin/tesseract"
 
 app = FastAPI()
 
