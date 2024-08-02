@@ -8,7 +8,7 @@ from fastapi import FastAPI, UploadFile, File
 from fastapi.responses import JSONResponse
 
 # Update the Tesseract command path to be set through an environment variable
-pytesseract.pytesseract.tesseract_cmd = os.getenv('TESSERACT_CMD', '/usr/bin/tesseract')
+pytesseract.pytesseract.tesseract_cmd = ".\Tesseract-OCR\\tesseract.exe"
 
 app = FastAPI()
 
