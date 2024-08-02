@@ -1,5 +1,3 @@
-# main.py
-
 import fitz  # PyMuPDF
 from PIL import Image
 import pytesseract
@@ -9,7 +7,8 @@ import re
 from fastapi import FastAPI, UploadFile, File
 from fastapi.responses import JSONResponse
 
-pytesseract.pytesseract.tesseract_cmd =  "/usr/bin/tesseract"
+# Update the Tesseract command path to be set through an environment variable
+pytesseract.pytesseract.tesseract_cmd = os.getenv('TESSERACT_CMD', '/usr/bin/tesseract')
 
 app = FastAPI()
 
